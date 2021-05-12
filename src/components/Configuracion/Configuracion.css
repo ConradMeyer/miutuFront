@@ -1,0 +1,131 @@
+div.todo-configuracion {
+  background-color: #F7F7F7;
+  padding: 20px;
+  min-height: 100vh;
+}
+div.todo-configuracion img {
+  width: 25px;
+}
+div.todo-configuracion h3 {
+  text-align: center;
+}
+div.todo-configuracion img:hover {
+  cursor: pointer;
+}
+div.menu-configuracion .img-perfil {
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+div.menu-configuracion img {
+  width: 15px;
+}
+
+h1.titulo-configuracion {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+div.menu-configuracion {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.config-datos-perfil {
+  line-height: 1.6;
+  text-align: start;
+}
+div.config-datos-perfil h3 {
+  text-align: start;
+}
+
+div.coches-usuario {
+  margin: 25px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.coches-usuario img {
+  width: 35px;
+}
+div.coches-usuario img:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+div.info-coche {
+  margin: 40px auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #69e5af;
+  background-color: white;
+  border-radius: 25px;
+}
+
+div.input-coche {
+  background: linear-gradient(94.06deg, #69e5af -40.19%, #340d66 141.01%);
+  text-align: center;
+  border-radius: 25px 25px 0 0;
+}
+
+div.input-coche input {
+  color: black;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+div.info-coche input {
+  text-align: center;
+  width: 90%;
+  margin: 12px auto;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 2px 2px 10px -3px black;
+}
+div.info-coche input:focus {
+  outline: none;
+}
+input.nombre-usuario {
+  color: white;
+}
+
+div.editar-eliminar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-weight: 700;
+}
+div.editar-eliminar p:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+div.guardar-coche {
+  color: white;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 156px;
+  background: linear-gradient(94.06deg, #69e5af -40.19%, #340d66 141.01%);
+}
+div.guardar-coche:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+div.editar-usuario {
+  margin: 10px auto;
+}
+div.editar-usuario:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}

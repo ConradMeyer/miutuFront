@@ -1,0 +1,143 @@
+div.todo-pago {
+  background-color: whitesmoke;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+div.todo-pago img {
+  width: 25px;
+}
+div.todo-pago h3 {
+  text-align: center;
+}
+div.todo-pago img:hover {
+  cursor: pointer;
+}
+div.menu-pago .img-perfil {
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+div.menu-pago img {
+  width: 15px;
+}
+div.tarjetas-usuario {
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+div.tarjetas-usuario img {
+  width: 35px;
+}
+h1.titulo-pago {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+div.menu-pago {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.config-datos-perfil {
+  line-height: 1.6;
+  text-align: start;
+}
+div.config-datos-perfil h3 {
+  text-align: start;
+}
+div.input-tarjeta input {
+  color: black;
+  font-weight: bold;
+  background: rgba(243, 240, 240, 0.6);
+}
+div.input-titular input {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-weight: bold;
+  background: rgba(243, 240, 240, 0.6);
+}
+
+div.eliminar-tarjeta {
+  margin: 10px auto;
+  font-weight: bold;
+}
+div.eliminar-tarjeta p:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.info-tarjeta {
+  margin: 20px auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #69e5af;
+  background-color: white;
+  border-radius: 25px;
+}
+
+div.info-tarjeta input {
+  text-align: center;
+  width: 90%;
+  margin: 12px auto;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 2px 2px 10px -3px black;
+}
+.input-tarjeta {
+  text-align: center;
+  background: linear-gradient(94.06deg, #69e5af -40.19%, #340d66 141.01%);
+  color: black;
+  font-weight: 600;
+  border-radius: 25px 25px 0 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+div.añadir-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+div.añadir-inputs select {
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 2px 2px 10px -3px black;
+}
+
+div.input-titular {
+  text-align: center;
+  background: linear-gradient(94.06deg, #69e5af -40.19%, #340d66 141.01%);
+  color: black;
+  font-weight: 600;
+  border-radius: 25px 25px 0 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+div.guardar-tarjeta {
+  color: white;
+  border-radius: 20px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 156px;
+  background: linear-gradient(94.06deg, #69e5af -40.19%, #340d66 141.01%);
+}
+
+div.guardar-tarjeta:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}

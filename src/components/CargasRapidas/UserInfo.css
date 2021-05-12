@@ -1,0 +1,103 @@
+div.todo-onbording {
+  background-color: #F2FDF8;
+  height: 100vh;
+  padding: 20px;
+  color: #082b1c;
+}
+div.main-saltar {
+  display: flex;
+  justify-content: flex-end;
+}
+div.main-saltar a {
+  color: #082b1c;
+  font-weight: bold;
+}
+
+div.main-saltar:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+div.main-generalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80vh;
+}
+h2.main-titulo-parent {
+  font-size: 31px;
+  color: #082b1c;
+}
+
+/* ---------CARGA1--------- */
+div.carga1-rectangle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+}
+
+div.carga2-rectangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 350px;
+}
+div.carga1-rectangle .titulo-carga1 {
+  font-size: 26px;
+  margin: 0px auto;
+  text-align: center;
+  width: 250px;
+}
+
+div.carga1-div1 {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 30px auto;s */
+}
+div.carga1-div1 img {
+  width: 60px;
+}
+
+div.carga1-div1 .carga1-div1p {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 25px;
+}
+img.toggle-onbording {
+    width: 50px;
+    margin: 5px auto;
+}
+div.main-botonera button {
+  width: 156px;
+  height: 48px;
+  border-radius: 31px;
+  margin: 5px;
+}
+
+div.main-botonera button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+div.main-botonera .atras {
+  color: #082b1c;
+  border: 1px solid #082b1c;
+  background-color: #F7F7F7;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+div.main-botonera .siguiente {
+  color: #f2fdf8;
+  background-color: #082b1c;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0px 5px 10px rgba(8, 43, 28, 0.25);
+}

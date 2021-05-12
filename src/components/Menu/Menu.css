@@ -1,0 +1,44 @@
+.menu-desplegable {
+    position: absolute;
+    background-color: rgba(246, 246, 246, 0.9);
+    height: 100vh;
+    z-index: 1;
+    width: 80%;
+    left: -80%;
+    transition: left 1s;
+    z-index: 1;
+  }
+  .menu-desplegable.true {
+    left: 0;
+  }
+  .perfil {
+    background-color: rgb(41, 37, 37);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+  .perfil img {
+    margin: 10px 15px;
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid red;
+  }
+  .menu-listado {
+    text-align: start;
+  }
+  .menu-listado a {
+    text-decoration: none;
+    color: black;
+  }
+  .menu-listado li {
+    margin-top: 35px;
+    margin-left: 25px;
+    list-style-type: none;
+    font-weight: bolder;
+  }
+  .menu-listado li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
