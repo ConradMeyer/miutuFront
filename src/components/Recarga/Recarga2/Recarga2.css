@@ -49,7 +49,7 @@ div.hora-precio h3 {
   color: #082B1C;
 }
 
-:root .valoracion{
+:root {
   --color-inactivo: #5f5050;
   --color-hover: #ffa400;
 }

@@ -33,11 +33,13 @@ function Pago() {
   return (
     <>
       <div className="todo-pago">
-        <Link to="/home">
-          <img src={atras} alt="atras" />
-        </Link>
         <div className="main-pago">
-          <h1 className="titulo-pago">Formas de Pago</h1>
+          <div className="verde">
+            <Link to="/home">
+              <img src={atras} alt="atras" />
+            </Link>
+            <h1 className="titulo-pago">Formas de Pago</h1>
+          </div>
           <div className="menu-pago">
             <img
               className="img-perfil"

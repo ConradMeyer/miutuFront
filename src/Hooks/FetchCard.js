@@ -7,7 +7,6 @@ async function FetchCard(card) {
       "Authorization": card.token
     }
   };
-  console.log(options);
   return await fetch("http://localhost:8080/create/card", options);
 }
 

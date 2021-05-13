@@ -59,7 +59,8 @@ function Home(props) {
         nombre: `${usuario.name} ${usuario.surname}`,
         concepto: `Recarga de ${coches[0].descripcion}`,
         importe: importe,
-        direccion: direccion
+        direccion: direccion,
+        email: usuario.email
       };
       const result = await FetchNewInvoice(
         newInvoice,
@@ -84,14 +85,21 @@ function Home(props) {
   };
 
   useEffect(() => {
-    const fetch1 = async () => {
-      const result = await FetchUser(sessionStorage.getItem("token"));
-      const data = await result.json();
-      setCoches(data.result.coches);
-      setTarjetas(data.result.tarjetas);
-      setUsuario(data.result);
-    };
-    fetch1();
+    if (
+      sessionStorage.getItem("token") &&
+      sessionStorage.getItem("token") !== ""
+    ) {
+      const fetch1 = async () => {
+        const result = await FetchUser(sessionStorage.getItem("token"));
+        const data = await result.json();
+        setCoches(data.result.coches);
+        setTarjetas(data.result.tarjetas);
+        setUsuario(data.result);
+      };
+      fetch1();
+    } else {
+      history.push("/");
+    }
   }, []);
 
   const open = Boolean(anchorEl);
@@ -107,13 +115,15 @@ function Home(props) {
         lng: position.coords.longitude,
       });
 
-      fetch(`http://nominatim.openstreetmap.org/reverse?format=json&addressdetails=0&zoom=18&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
-        .then(res => res.json())
-        .then(data => data.display_name.split(","))
-        .then(adress => {
-          setDireccion(adress)
+      fetch(
+        `http://nominatim.openstreetmap.org/reverse?format=json&addressdetails=0&zoom=18&lat=${position.coords.latitude}&lon=${position.coords.longitude}`
+      )
+        .then((res) => res.json())
+        .then((data) => data.display_name.split(","))
+        .then((adress) => {
+          setDireccion(adress);
           console.log(adress);
-        }) 
+        });
     });
   };
 
@@ -138,28 +148,37 @@ function Home(props) {
       </main>
       <footer className="home-footer">
         <div className="info-recarga">
-            <img src={coche} alt="coche" aria-describedby={id} onClick={handleClick} />
-            <Popper id={id} open={open} anchorEl={anchorEl}>
-              <div className={classes.paper}>
-                {coches.length > 0
-                  ? coches[0].descripcion
-                  : "Aun no hay coches añadidos"}
-              </div>
-            </Popper>
+          <img
+            src={coche}
+            alt="coche"
+            aria-describedby={id}
+            onClick={handleClick}
+          />
+          <Popper id={id} open={open} anchorEl={anchorEl}>
+            <div className={classes.paper}>
+              {coches.length > 0
+                ? coches[0].descripcion
+                : "Aun no hay coches añadidos"}
+            </div>
+          </Popper>
           <div className="recarga" onClick={handleRecarga}>
             <h2>{importe}</h2>
             <p>{recarga ? "por 1/2h de recarga" : "por 1h de recarga"}</p>
           </div>
-          
-            <img src={cargador} alt="cargador" aria-describedby={id2}
-            onClick={handleClick2} />
-            <Popper id={id2} open={open2} anchorEl={anchorEl2}>
-              <div className={classes.paper}>
-                {coches.length > 0
-                  ? coches[0].cargador
-                  : "Aun no hay coches añadidos"}
-              </div>
-            </Popper>
+
+          <img
+            src={cargador}
+            alt="cargador"
+            aria-describedby={id2}
+            onClick={handleClick2}
+          />
+          <Popper id={id2} open={open2} anchorEl={anchorEl2}>
+            <div className={classes.paper}>
+              {coches.length > 0
+                ? coches[0].cargador
+                : "Aun no hay coches añadidos"}
+            </div>
+          </Popper>
         </div>
         <hr />
         <div className="select">

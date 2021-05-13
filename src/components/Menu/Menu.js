@@ -32,7 +32,7 @@ function Menu(props) {
         <h3>{props.data ? props.data.name : ""}<br/>{props.data ? props.data.surname : ""}</h3>
       </div>
       <ul className="menu-listado">
-        <li>Mis recargas</li>
+        <li onClick={dataContext.toggleMenu}><Link to="/tusrecargas">Mis recargas</Link></li>
         <li onClick={dataContext.toggleMenu}><Link to="/pago">Pago</Link></li>
         <li onClick={dataContext.toggleMenu}><Link to="/configuracion">Configuración</Link></li>
         <li onClick={logout}>Logout</li>

@@ -3,9 +3,11 @@ import "./RegistroP3.css";
 import { Link } from "react-router-dom";
 import atras from "../../assets/atras.svg";
 import FetchSignup from "../../Hooks/FetchSignup";
-import { useHistory } from "react-router-dom";
+import FetchSignupFB from "../../Hooks/FetchFB";
+import { useHistory, useLocation } from "react-router-dom";
 
 function Registrop3(props) {
+  const location = useLocation()
   const history = useHistory();
   const [nombre] = useState(props.data.nombre);
   const [apellido] = useState(props.data.apellido);
@@ -18,20 +20,44 @@ function Registrop3(props) {
   };
 
   const signup = async () => {
-    const result = await FetchSignup(nombre, apellido, email, pass, movil);
-    const data = await result.json();
-    if (data.status === 200) {
-      await props.data.signin(data.token);
-      history.push("/tarjeta");
-    } else if (data.status === 500) {
-      alert(data.data);
-    } else if (data.status === 500) {
-      alert(data.data);
-    } else if (data.status === 406) {
-      alert(data.data);
-      history.push("/registroP2");
+    if (pass !== "") {
+      const result = await FetchSignup(nombre, apellido, email, pass, movil);
+      const data = await result.json();
+      if (data.status === 200) {
+        await props.data.signin(data.token);
+        history.push("/tarjeta");
+      } else if (data.status === 500) {
+        alert(data.data);
+      } else if (data.status === 500) {
+        alert(data.data);
+      } else if (data.status === 406) {
+        alert(data.data);
+        history.push("/registroP2");
+      } else {
+        console.log(data);
+      }
     } else {
-      console.log(data);
+      const user = {
+        name: location.state.name,
+        email: location.state.email,
+        pass: "Facebook92",
+        movil: movil
+      }
+      const result = await FetchSignupFB(user);
+      const data = await result.json();
+      if (data.status === 200) {
+        await props.data.signin(data.token);
+        history.push("/tarjeta");
+      } else if (data.status === 500) {
+        alert(data.data);
+      } else if (data.status === 500) {
+        alert(data.data);
+      } else if (data.status === 406) {
+        alert(data.data);
+        history.push("/registroP2");
+      } else {
+        console.log(data);
+      }
     }
   };
 

@@ -1,60 +1,57 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Tarjeta.css";
 import { Link, useHistory } from "react-router-dom";
 import logoTarjeta from "../../assets/Tarjeta.svg";
-import FetchCard from "../../Hooks/FetchCard"
+import FetchCard from "../../Hooks/FetchCard";
 
-function Tarjeta(props) {
-  const history = useHistory()
-  const [titular, setTitular] =useState("")
-  const [tarjeta, setTarjeta] =useState("")
-  const [codigo, setCodigo] =useState("")
-  const [fecha, setFecha] =useState({mes: "", año: ""})
+function Tarjeta() {
+  const history = useHistory();
+  const [titular, setTitular] = useState("");
+  const [tarjeta, setTarjeta] = useState("");
+  const [codigo, setCodigo] = useState("");
+  const [fecha, setFecha] = useState({ mes: "", año: "" });
 
   const handleTitular = (e) => {
-    setTitular(e.target.value)
-  }
+    setTitular(e.target.value);
+  };
   const handleTarjeta = (e) => {
-    setTarjeta(e.target.value)
-  }
+    setTarjeta(e.target.value);
+  };
   const handleCodigo = (e) => {
-    setCodigo(e.target.value)
-  }
+    setCodigo(e.target.value);
+  };
   const handleFecha = (e) => {
-    setFecha({mes: e.target.value, año: fecha.año})
-  }
+    setFecha({ mes: e.target.value, año: fecha.año });
+  };
   const handleFecha2 = (e) => {
-    setFecha({mes: fecha.mes, año: e.target.value})
-  }
+    setFecha({ mes: fecha.mes, año: e.target.value });
+  };
 
-  const card = {
-    titular: titular,
-    numero: tarjeta,
-    fecha: `${fecha.mes}/${fecha.año}`,
-    codigo: codigo,
-    token: sessionStorage.getItem("token")
-  }
   const addCard = async () => {
-    const result = await FetchCard(card)
-    const data = await result.json()
-    if(data.status === 406) {
-      alert(data.data)
+    const card = {
+      titular: titular,
+      numero: tarjeta,
+      fecha: `${fecha.mes}/${fecha.año}`,
+      codigo: codigo,
+      token: sessionStorage.getItem("token"),
+    };
+    const result = await FetchCard(card);
+    const data = await result.json();
+    if (data.status === 406) {
+      alert(data.data);
+    } else if (data.status === 401) {
+      alert(data.data);
+    } else if (data.status === 200) {
+      history.push("/carga1");
+    } else if (data.status === 500) {
+      alert(data.data);
     }
-    else if(data.status === 401) {
-      alert(data.data)
-    }
-    else if(data.status === 200) {
-      history.push("/carga1")
-    }
-    else if(data.status === 500) {
-      alert(data.data)
-    }
-  }
+  };
 
   return (
     <div className="todo-tarjeta">
       <div className="omitir">
-        <Link to="/home">
+        <Link to="/carga1">
           <p className="text-omitir">Omitir por ahora</p>
         </Link>
       </div>
@@ -62,13 +59,29 @@ function Tarjeta(props) {
         <div className="img-tarjeta">
           <h3>Introduzca los datos de su tarjeta</h3>
           <div className="tarjeta">
-            <img src={logoTarjeta} alt="tarjeta-credito" id="tarjeta-credito"></img>
+            <img
+              src={logoTarjeta}
+              alt="tarjeta-credito"
+              id="tarjeta-credito"
+            ></img>
             <h4>Tarjeta de crédito o débito</h4>
           </div>
         </div>
         <div className="inputs">
-          <input type="text" name="nombre-titular" id="nombre-titular" placeholder="Nombre del titular" onChange={handleTitular}/>
-          <input type="text" name="numero-tarjeta" id="numero-tarjeta" placeholder="Numero de tarjeta" onChange={handleTarjeta} />
+          <input
+            type="text"
+            name="nombre-titular"
+            id="nombre-titular"
+            placeholder="Nombre del titular"
+            onChange={handleTitular}
+          />
+          <input
+            type="text"
+            name="numero-tarjeta"
+            id="numero-tarjeta"
+            placeholder="Numero de tarjeta"
+            onChange={handleTarjeta}
+          />
           <div className="inputs2">
             <select name="mes-tarjeta" id="mes-tarjeta" onChange={handleFecha}>
               <option value="0">Mes</option>
@@ -96,7 +109,13 @@ function Tarjeta(props) {
               <option value="2027">2027</option>
               <option value="2028">2028</option>
             </select>
-            <input type="text" name="codigo" id="codigo" placeholder="codigo" onChange={handleCodigo} />
+            <input
+              type="text"
+              name="codigo"
+              id="codigo"
+              placeholder="codigo"
+              onChange={handleCodigo}
+            />
           </div>
         </div>
         <div className="botones-tarjeta">

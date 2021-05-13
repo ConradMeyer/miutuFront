@@ -1,0 +1,16 @@
+button.facebook {
+  width: 270px;
+  height: 32px;
+  margin: 15px auto;
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+  box-shadow: 3px 3px 10px -3px black;
+  border: none;
+  border-radius: 100px;
+  background: #004f9d;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}

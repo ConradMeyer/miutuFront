@@ -21,21 +21,23 @@ export default function Coche(props) {
   };
 
   const FetchDelete = async () => {
-    const car = {
-      descripcion: coche,
-      cargador: cargador,
-      color: color,
-      matricula: props.coche.matricula,
-    };
-    const result = await FetchDeleteCar(car, token);
-    const data = await result.json();
-    if (data.status === 200) {
-    } else if (data.status === 401) {
-      alert(data.data);
-    } else if (data.status === 406) {
-      alert(data.data);
-    } else if (data.status === 500) {
-      alert(data.data);
+    if(window.confirm("¿Estás seguro de que quieres eliminar este coche?")){
+      const car = {
+        descripcion: coche,
+        cargador: cargador,
+        color: color,
+        matricula: props.coche.matricula,
+      };
+      const result = await FetchDeleteCar(car, token);
+      const data = await result.json();
+      if (data.status === 200) {
+      } else if (data.status === 401) {
+        alert(data.data);
+      } else if (data.status === 406) {
+        alert(data.data);
+      } else if (data.status === 500) {
+        alert(data.data);
+      }
     }
   };
 
@@ -62,7 +64,7 @@ export default function Coche(props) {
     <>
       <div className="info-coche" onClick={() => props.select(props.coche)}>
         <div className="input-coche">
-          <input type="text" value={coche} onChange={handleCoche} />
+          <input type="text" value={props.coche.descripcion} onChange={handleCoche} />
         </div>
         <input type="text" value={cargador} onChange={handleCargador} />
         <input type="text" value={color} onChange={handleColor} />

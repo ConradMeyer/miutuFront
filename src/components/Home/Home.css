@@ -11,7 +11,7 @@ div.main-home a {
   text-decoration: none;
 }
 .home-header {
-  background-color: #69e5af;
+  background: linear-gradient(94.06deg, #56CCF2 -40.19%, #22C47D 141.01%);
   display: flex;
   padding: 30px 20px 12px 20px;
   color: white;
@@ -43,6 +43,10 @@ div.main-home a {
 }
 .info-recarga img {
   width: 75px;
+}
+.info-recarga img:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 .info-recarga .recarga {
   padding: 20px;
@@ -94,7 +98,7 @@ footer .btn-recarga h3 {
   width: 90%;
   margin: 0px auto;
   padding: 7px;
-  background-color: #69e5af;
+  background: linear-gradient(94.06deg, #56CCF2 -40.19%, #22C47D 141.01%);
 }
 footer .btn-recarga:hover {
   cursor: pointer;

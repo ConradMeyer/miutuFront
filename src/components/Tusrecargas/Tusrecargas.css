@@ -1,0 +1,41 @@
+div.todo-tusrecargas {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+div.main-recargas .verde {
+  padding: 20px;
+  background: linear-gradient(94.06deg, #56CCF2 -40.19%, #22C47D 141.01%);
+}
+div.todo-tusrecargas img {
+  width: 25px;
+}
+div.todo-tusrecargas h1 {
+  text-align: center;
+  margin: 5px auto;
+}
+h3.sin-recargas {
+  text-align: center;
+}
+div.todo-tusrecargas img:hover {
+  cursor: pointer;
+}
+div.info-factura {
+  width: 90%;
+  font-size: 15px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px -1px black;
+  margin: 25px auto;
+  border-radius: 15px;
+  background-color: white;
+}
+div.info-factura .importe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+div.fecha {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

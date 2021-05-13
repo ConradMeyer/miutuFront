@@ -8,7 +8,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 function Config() {
-  const history = useHistory()
+  const history = useHistory();
   const [select, setSelect] = useState({});
   const [user, setUser] = useState();
 
@@ -40,11 +40,13 @@ function Config() {
   return (
     <>
       <div className="todo-configuracion">
-        <Link to="/home">
-          <img src={atras} alt="atras" />
-        </Link>
         <div className="main-configuracion">
-          <h1 className="titulo-configuracion">Configuración</h1>
+          <div className="verde">
+            <Link to="/home">
+              <img src={atras} alt="atras" />
+            </Link>
+            <h1 className="titulo-configuracion">Configuración</h1>
+          </div>
           <div className="menu-configuracion">
             <img
               className="img-perfil"
@@ -58,10 +60,16 @@ function Config() {
               <p>+34 {user ? user.movil : ""}</p>
               <p>{user ? user.email : ""}</p>
             </div>
-              <img src={avanza} alt="avanza" onClick={()=> history.push({
-                pathname: "/editarUsuario",
-                state: user
-              })}/>
+            <img
+              src={avanza}
+              alt="avanza"
+              onClick={() =>
+                history.push({
+                  pathname: "/editarUsuario",
+                  state: user,
+                })
+              }
+            />
           </div>
           <div className="coches-usuario">
             <h2>Coches</h2>

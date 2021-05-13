@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UserInfo.css";
 import movil from "../../assets/movil.svg";
 import tarifa from "../../assets/tarifa.svg";
@@ -22,21 +22,21 @@ const UserInfo = () => {
               <img src={movil} alt="movil" className="movil" />
               <div className="carga1-div1p">
                 <h3>Marca</h3>
-                <p>tu ubicacion</p>
+                <p>Tu ubicación.</p>
               </div>
             </div>
             <div className="carga1-div1">
               <img src={tarifa} alt="tarifa" className="tarifa" />
               <div className="carga1-div1p">
-                <h3>Selecciones</h3>
-                <p>el importe de carga</p>
+                <h3>Selecciona</h3>
+                <p>El importe de carga.</p>
               </div>
             </div>
             <div className="carga1-div1">
               <img src={tiempo} alt="tiempo" className="tiempo" />
               <div className="carga1-div1p">
                 <h3>Tiempo</h3>
-                <p>indique el horario que estará estacionado</p>
+                <p>Indica el tiempo que estarás aparcado.</p>
               </div>
             </div>
           </div>

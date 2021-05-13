@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UserInfo.css";
 import park from "../../assets/park.svg";
 import oil from "../../assets/oil.svg";
@@ -22,14 +22,14 @@ const UserInfo = () => {
               <img src={park} alt="parking" className="park" />
               <div className="carga1-div1p">
                 <h3>Aparca</h3>
-                <p>Tu coche como siempre</p>
+                <p>Tu coche como siempre.</p>
               </div>
             </div>
             <div className="carga1-div1">
               <img src={oil} alt="tapa" className="oil" />
               <div className="carga1-div1p">
                 <h3>Abre</h3>
-                <p>la tapa de la gasolina</p>
+                <p>La tapa de la gasolina.</p>
               </div>
             </div>
             <img src={toggle} alt="toggle" className="toggle-onbording"/>

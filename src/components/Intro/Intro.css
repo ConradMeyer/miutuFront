@@ -47,7 +47,7 @@ div.botones-signup a {
   text-decoration: none;
   color: white;
 }
-div.botones-signup button {
+div.botones-signup button.registrate {
   width: 80%;
   height: 46px;
   color: white;
@@ -58,7 +58,7 @@ div.botones-signup button {
   border: none;
   border-radius: 56px;
 }
-div.botones-signup button:hover {
+div.botones-signup button.registrate:hover {
   cursor: pointer;
   transform: scale(1.02);
 }
@@ -84,9 +84,6 @@ div.botones-redessoci button {
 div.botones-redessoci button:hover {
   cursor: pointer;
   transform: scale(1.02);
-}
-div.botones-redessoci button.btn-facebook {
-  background-color: #004f9d;
 }
 div.botones-redessoci button.btn-google {
   background-color: #ffffff;

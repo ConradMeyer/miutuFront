@@ -5,22 +5,24 @@ function Tarjeta(props) {
   const [token] = useState(sessionStorage.getItem("token"));
 
   const FetchDelete = async () => {
-    const card = {
-      titular: props.tarjeta.titular,
-      numero: props.tarjeta.numero,
-      fecha: props.tarjeta.fecha,
-      codigo: props.tarjeta.codigo,
-    };
-
-    const result = await FetchDeleteCard(card, token);
-    const data = await result.json();
-    if (data.status === 200) {
-    } else if (data.status === 401) {
-      alert(data.data);
-    } else if (data.status === 406) {
-      alert(data.data);
-    } else if (data.status === 500) {
-      alert(data.data);
+    if(window.confirm("¿Estás seguro de que quieres eliminar esta tarjeta?")){
+      const card = {
+        titular: props.tarjeta.titular,
+        numero: props.tarjeta.numero,
+        fecha: props.tarjeta.fecha,
+        codigo: props.tarjeta.codigo,
+      };
+  
+      const result = await FetchDeleteCard(card, token);
+      const data = await result.json();
+      if (data.status === 200) {
+      } else if (data.status === 401) {
+        alert(data.data);
+      } else if (data.status === 406) {
+        alert(data.data);
+      } else if (data.status === 500) {
+        alert(data.data);
+      }
     }
   };
 
