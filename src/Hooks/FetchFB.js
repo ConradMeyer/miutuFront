@@ -4,7 +4,7 @@ async function FetchSignupFB(user) {
       body: JSON.stringify(user),
       headers: { "Content-Type": "application/json" },
     };
-    return await fetch("http://localhost:8080/signup/google", options);
+    return await fetch("https://miutu-eco.herokuapp.com/signup/google", options);
   }
   
   export default FetchSignupFB;

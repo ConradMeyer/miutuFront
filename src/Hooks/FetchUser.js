@@ -6,7 +6,7 @@ async function FetchUser (token) {
             "Authorization": token
         }
       };
-    return await fetch("http://localhost:8080/usuario/get", options)
+    return await fetch("https://miutu-eco.herokuapp.com/usuario/get", options)
 }
 
 export default FetchUser;

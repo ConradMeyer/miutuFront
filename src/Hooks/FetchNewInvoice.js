@@ -7,7 +7,7 @@ async function FetchNewInvoice (factura, token) {
             "Authorization": token
         }
       };
-    return await fetch("http://localhost:8080/invoice", options)
+    return await fetch("https://miutu-eco.herokuapp.com/invoice", options)
 }
 
 export default FetchNewInvoice;

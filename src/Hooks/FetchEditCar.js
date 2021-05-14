@@ -7,7 +7,7 @@ async function FetchEditCar (coche, token) {
             "Authorization": token
         }
       };
-    return await fetch("http://localhost:8080/edit/car", options)
+    return await fetch("https://miutu-eco.herokuapp.com/edit/car", options)
 }
 
 export default FetchEditCar;

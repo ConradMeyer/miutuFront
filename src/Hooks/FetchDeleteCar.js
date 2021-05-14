@@ -7,7 +7,7 @@ async function FetchDeleteCar (coche, token) {
             "Authorization": token
         }
       };
-    return await fetch("http://localhost:8080/delete/car", options)
+    return await fetch("https://miutu-eco.herokuapp.com/delete/car", options)
 }
 
 export default FetchDeleteCar

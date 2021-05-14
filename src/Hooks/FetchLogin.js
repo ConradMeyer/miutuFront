@@ -7,7 +7,7 @@ async function FetchLogin (email, pass) {
          }),
         headers: { "Content-Type": "application/json" }
       };
-    return await fetch("http://localhost:8080/signin", options)
+    return await fetch("https://miutu-eco.herokuapp.com/signin", options)
 }
 
 export default FetchLogin

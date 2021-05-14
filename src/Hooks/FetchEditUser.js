@@ -7,7 +7,7 @@ async function FetchEditUser (user, token) {
             "Authorization": token
         }
       };
-    return await fetch("http://localhost:8080/edit/user", options)
+    return await fetch("https://miutu-eco.herokuapp.com/edit/user", options)
 }
 
 export default FetchEditUser;

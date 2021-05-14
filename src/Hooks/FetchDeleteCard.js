@@ -7,7 +7,7 @@ async function FetchDeleteCard (tajeta, token){
             "Authorization": token
         }
     };
-    return await fetch("http://localhost:8080/delete/card", options)
+    return await fetch("https://miutu-eco.herokuapp.com/delete/card", options)
 }
 
 export default FetchDeleteCard;

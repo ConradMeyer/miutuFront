@@ -7,7 +7,7 @@ async function FetchCard(card) {
       "Authorization": card.token
     }
   };
-  return await fetch("http://localhost:8080/create/card", options);
+  return await fetch("https://miutu-eco.herokuapp.com/create/card", options);
 }
 
 export default FetchCard;
