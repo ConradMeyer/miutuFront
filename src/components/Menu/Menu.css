@@ -2,11 +2,10 @@
     position: absolute;
     background-color: rgba(246, 246, 246, 0.9);
     height: 100vh;
-    z-index: 1;
+    z-index: 999;
     width: 80%;
     left: -80%;
-    transition: left 1s;
-    z-index: 1;
+    transition: left 1s
   }
   .menu-desplegable.true {
     left: 0;

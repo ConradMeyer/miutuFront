@@ -9,6 +9,7 @@ import location from "../../assets/Localizador.svg";
 import AuthContext from "../../contexts/AuthContext";
 import FetchUser from "../../Hooks/FetchUser";
 import FetchNewInvoice from "../../Hooks/FetchNewInvoice";
+import SearchLocationInput from "../Direccion/SearchLocationInput";
 import { useHistory } from "react-router-dom";
 import "./Home.css";
 
@@ -33,6 +34,14 @@ function Home(props) {
   const [direccion, setDireccion] = useState();
   const [importe, setImporte] = useState("€ 5,99");
   const dataContext = useContext(AuthContext);
+
+  const handlePosition = (position) => {
+    setPosition(position)
+  }
+
+  const handleAddress = (address) => {
+    setDireccion(address)
+  }
 
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
@@ -60,7 +69,7 @@ function Home(props) {
         concepto: `Recarga de ${coches[0].descripcion}`,
         importe: importe,
         direccion: direccion,
-        email: usuario.email
+        email: usuario.email,
       };
       const result = await FetchNewInvoice(
         newInvoice,
@@ -122,7 +131,6 @@ function Home(props) {
         .then((data) => data.display_name.split(","))
         .then((adress) => {
           setDireccion(adress);
-          console.log(adress);
         });
     });
   };
@@ -144,6 +152,9 @@ function Home(props) {
         <img src={location} alt="menu" id="ubicacion" onClick={localizacion} />
       </header>
       <main>
+        <div className="caja-adress">
+          <SearchLocationInput onChange={() => null} handlePosition={handlePosition} handleAddress={handleAddress} />
+        </div>
         <MapView data={position} />
       </main>
       <footer className="home-footer">

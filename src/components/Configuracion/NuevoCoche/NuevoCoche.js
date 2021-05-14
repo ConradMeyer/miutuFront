@@ -17,7 +17,6 @@ function NuevoCoche() {
 
   const handleAutocomplete = (e, newValue) => {
     if (newValue != null) {
-      console.log(newValue);
       setCoche(newValue.modelo);
       setCargador(newValue.cargador);
     }
