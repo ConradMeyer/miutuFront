@@ -17,6 +17,7 @@ import Carga2 from "./components/CargasRapidas/Carga2";
 import Pago from "./components/Pago/Pago";
 import NuevaTarjeta from "./components/Pago/NuevaTarjeta/NuevaTarjeta";
 import Tusrecargas from "./components/Tusrecargas/Tusrecargas";
+import PagError from './components/PagError/PagError'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -136,6 +137,7 @@ function App() {
             <Route path="/tusrecargas">
               <Tusrecargas />
             </Route>
+            <Route component={PagError} />
           </Switch>
         </div>
       </Router>

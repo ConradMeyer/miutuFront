@@ -10,8 +10,10 @@ function Factura(props) {
         </div>
         <div className="info">
           <h4>{props.factura.concepto}</h4>
-          <p>{props.factura.direccion && props.factura.direccion[1]}</p>
-          <p>{props.factura.direccion && props.factura.direccion[3]}</p>
+          <p>{props.factura.direccion && props.factura.direccion[0]} {props.factura.direccion && props.factura.direccion[1]}</p>
+          <p></p>
+          <p>Madrid</p>
+
           <div className="fecha">
             <p>
               <strong>Fecha: </strong>

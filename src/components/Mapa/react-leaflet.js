@@ -12,22 +12,18 @@ class MapView extends Component {
       zoom: 15,
     };
   }
-
   render() {
     const { position, zoom } = this.state;
     return (
       <MapContainer
         key={JSON.stringify(this.props.data)}
         center={
-          Object.keys(this.props.data).length !== 0
-            ? this.props.data
-            : position
+          Object.keys(this.props.data).length !== 0 ? this.props.data : position
         }
         zoom={zoom}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution={<a href="https://osm.org/copyright">OpenStreetMap</a>}
           contributors
         />
         {Object.keys(this.props.data).length !== 0 ? (
