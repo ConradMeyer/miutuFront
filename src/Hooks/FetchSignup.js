@@ -8,7 +8,10 @@ async function FetchSignup(nombre, apellido, email, pass, movil) {
       pass: pass,
       movil: movil,
     }),
-    headers: { "Content-Type": "application/json" },
+    headers: { 
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': "*"
+     },
   };
   return await fetch("https://miutu-eco.herokuapp.com/signup", options);
 }

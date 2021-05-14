@@ -5,7 +5,10 @@ async function FetchLogin (email, pass) {
           email: email,
           pass: pass
          }),
-        headers: { "Content-Type": "application/json" }
+        headers: { 
+          "Content-Type": "application/json",
+          'Access-Control-Allow-Origin': "*"
+       }
       };
     return await fetch("https://miutu-eco.herokuapp.com/signin", options)
 }
