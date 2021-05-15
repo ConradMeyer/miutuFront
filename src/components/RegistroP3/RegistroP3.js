@@ -28,9 +28,7 @@ function Registrop3(props) {
         history.push("/tarjeta");
       } else if (data.status === 500) {
         alert(data.data);
-      } else if (data.status === 500) {
-        alert(data.data);
-      } else if (data.status === 406) {
+      }  else if (data.status === 406) {
         alert(data.data);
         history.push("/registroP2");
       } else {
