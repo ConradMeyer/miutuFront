@@ -3,7 +3,8 @@ async function FetchLogout (token) {
         method: "PUT",
         headers: { 
             "Content-Type": "application/json",
-            "Authorization": token
+            "Authorization": token,
+            'Access-Control-Allow-Origin': "*"
         }
       };
     return await fetch("https://miutu-eco.herokuapp.com/signout", options)

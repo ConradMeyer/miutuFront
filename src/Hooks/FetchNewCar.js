@@ -4,7 +4,8 @@ async function FetchNewCar (coche, token) {
         body: JSON.stringify(coche),
         headers: { 
             "Content-Type": "application/json",
-            "Authorization": token
+            "Authorization": token,
+            'Access-Control-Allow-Origin': "*"
         }
       };
     return await fetch("https://miutu-eco.herokuapp.com/create/car", options)

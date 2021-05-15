@@ -4,7 +4,8 @@ async function FetchEditUser (user, token) {
         body: JSON.stringify(user),
         headers: { 
             "Content-Type": "application/json",
-            "Authorization": token
+            "Authorization": token,
+            'Access-Control-Allow-Origin': "*"
         }
       };
     return await fetch("https://miutu-eco.herokuapp.com/edit/user", options)

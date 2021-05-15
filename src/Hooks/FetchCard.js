@@ -4,7 +4,8 @@ async function FetchCard(card) {
     body: JSON.stringify(card),
     headers: {
       "Content-Type": "application/json",
-      "Authorization": card.token
+      "Authorization": card.token,
+      'Access-Control-Allow-Origin': "*"
     }
   };
   return await fetch("https://miutu-eco.herokuapp.com/create/card", options);
