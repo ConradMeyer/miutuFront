@@ -4,17 +4,19 @@
   box-sizing: border-box;
 }
 .main-home {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   height: 100vh;
 }
 div.main-home a {
   text-decoration: none;
 }
 .home-header {
-  background: linear-gradient(94.06deg, #56CCF2 -40.19%, #22C47D 141.01%);
-  display: flex;
-  padding: 30px 20px 12px 20px;
+  background: linear-gradient(94.06deg, #56ccf2 -40.19%, #22c47d 141.01%);
   color: white;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .home-header img {
@@ -28,8 +30,8 @@ div.main-home a {
 }
 
 .info-recarga {
-  margin: 5px 0;
-  padding: 5px;
+  /* margin: 5px 0;
+  padding: 5px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,22 +65,32 @@ div.main-home a {
   cursor: pointer;
   transform: scale(1.01);
 }
+
 hr {
   width: 90%;
-  margin: 5px auto;
+  margin: auto;
   color: black;
 }
+
 footer {
   background-color: whitesmoke;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 38vh;
 }
+
 footer .select {
-  padding: 6px;
+  /* padding: 6px; */
   text-align: center;
 }
+
 footer .select label {
   margin-left: 10px;
 }
+
 footer .select select {
   text-align: center;
   margin-left: 10px;
@@ -86,25 +98,32 @@ footer .select select {
   border-radius: 5px;
   border: none;
 }
+
 footer .btn-recarga {
   width: 100%;
   height: 93px;
   background-color: whitesmoke;
   color: white;
-  font-size: 25px;
+  font-size: 19px;
   font-weight: bold;
   text-align: center;
-  padding-top: 25px;
+  /* padding-top: 24px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 footer .btn-recarga h3 {
   width: 90%;
   margin: 0px auto;
   padding: 7px;
-  background: linear-gradient(94.06deg, #56CCF2 -40.19%, #22C47D 141.01%);
+  background: linear-gradient(94.06deg, #56ccf2 -40.19%, #22c47d 141.01%);
 }
+
 footer .btn-recarga:hover {
   cursor: pointer;
 }
+
 div.caja-adress {
   width: 100%;
   display: flex;
