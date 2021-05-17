@@ -125,7 +125,7 @@ function Home(props) {
       });
 
       fetch(
-        `http://nominatim.openstreetmap.org/reverse?format=json&addressdetails=0&zoom=18&lat=${position.coords.latitude}&lon=${position.coords.longitude}`
+        `https://nominatim.openstreetmap.org/reverse?format=json&addressdetails=0&zoom=18&lat=${position.coords.latitude}&lon=${position.coords.longitude}`
       )
         .then((res) => res.json())
         .then((data) => data.display_name.split(","))
