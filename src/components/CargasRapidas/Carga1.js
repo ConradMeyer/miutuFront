@@ -29,7 +29,7 @@ const UserInfo = () => {
               <img src={oil} alt="tapa" className="oil" />
               <div className="carga1-div1p">
                 <h3>Abre</h3>
-                <p>La tapa de la gasolina.</p>
+                <p>La tapa del cargador.</p>
               </div>
             </div>
             <img src={toggle} alt="toggle" className="toggle-onbording"/>
