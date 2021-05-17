@@ -53,10 +53,12 @@ div.main-home a {
   height: 100px;
   border-radius: 50%;
   line-height: 1.6;
+  text-align: center;
 }
 .info-recarga .recarga h2 {
-  font-size: 40px;
+  font-size: 35px;
 }
+
 .info-recarga .recarga:hover {
   cursor: pointer;
   transform: scale(1.01);
@@ -71,7 +73,7 @@ footer {
   width: 100%;
 }
 footer .select {
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 }
 footer .select label {
@@ -110,7 +112,7 @@ div.caja-adress {
 }
 main input.adress {
   text-align: center;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   width: 65%;
   margin: 10px auto;
