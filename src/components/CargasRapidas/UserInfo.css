@@ -73,8 +73,16 @@ img.toggle-onbording {
     width: 50px;
     margin: 5px auto;
 }
+div.main-botonera {
+  width: 100%;
+  display: flex;
+  justify-content:center;
+
+}
 div.main-botonera button {
-  width: 156px;
+  width: 45%;
+  max-width: 160px;
+  min-width: 110px;
   height: 48px;
   border-radius: 31px;
   margin: 5px;
