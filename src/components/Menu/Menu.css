@@ -34,8 +34,12 @@
   .menu-listado li {
     margin-top: 35px;
     margin-left: 25px;
+    font-size: 18px;
     list-style-type: none;
     font-weight: bolder;
+  }
+  .menu-listado li.cerrar-sesion {
+    color: red;
   }
   .menu-listado li:hover {
     cursor: pointer;

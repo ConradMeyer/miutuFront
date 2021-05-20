@@ -32,14 +32,13 @@ function App() {
     setNombre(event.target.value);
   };
   const handleNombrefb = (name) => {
-    console.log(name);
     setNombre(name);
   };
   const handleApellido = (event) => {
     setApellido(event.target.value);
   };
   const handleEmail = (event) => {
-    setEmail(event.target.value);
+    setEmail(event.target.value.toLowerCase());
   };
   const handleEmailfb = (email) => {
     setEmail(email);

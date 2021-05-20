@@ -1,6 +1,7 @@
 import "./Pago.css";
 import atras from "../../assets/atras.svg";
 import añadir from "../../assets/añadir-coche.svg";
+import usuario from "../../assets/usuario.svg";
 import FetchUser from "../../Hooks/FetchUser";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -43,7 +44,7 @@ function Pago() {
           <div className="menu-pago">
             <img
               className="img-perfil"
-              src="https://media-exp1.licdn.com/dms/image/C4E03AQHrfYwlcuM60g/profile-displayphoto-shrink_200_200/0/1593101044871?e=1625097600&v=beta&t=X8x7MTDgtBK0RSAnny_bd0t3xP5RVdhmqYrFfSxJiDI"
+              src={user && user.img !== "" ? user.img : usuario}
               alt="foto perfil"
             />
             <div className="config-datos-perfil">

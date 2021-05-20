@@ -36,12 +36,12 @@ function Home(props) {
   const dataContext = useContext(AuthContext);
 
   const handlePosition = (position) => {
-    setPosition(position)
-  }
+    setPosition(position);
+  };
 
   const handleAddress = (address) => {
-    setDireccion(address)
-  }
+    setDireccion(address);
+  };
 
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
@@ -153,7 +153,11 @@ function Home(props) {
       </header>
       <main>
         <div className="caja-adress">
-          <SearchLocationInput onChange={() => null} handlePosition={handlePosition} handleAddress={handleAddress} />
+          <SearchLocationInput
+            onChange={() => null}
+            handlePosition={handlePosition}
+            handleAddress={handleAddress}
+          />
         </div>
         <MapView data={position} />
       </main>

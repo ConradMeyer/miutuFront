@@ -13,7 +13,7 @@ async function FetchSignup(nombre, apellido, email, pass, movil) {
       'Access-Control-Allow-Origin': "*"
      }
   };
-  return await fetch("https://miutu-eco.herokuapp.com/signup", options);
+  return await fetch("http://localhost:8080/signup", options);
 }
 
 export default FetchSignup;

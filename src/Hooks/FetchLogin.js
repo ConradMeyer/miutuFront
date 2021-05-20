@@ -10,7 +10,7 @@ async function FetchLogin (email, pass) {
           'Access-Control-Allow-Origin': "*"
        }
       };
-    return await fetch("https://miutu-eco.herokuapp.com/signin", options)
+    return await fetch("http://localhost:8080/signin", options)
 }
 
 export default FetchLogin

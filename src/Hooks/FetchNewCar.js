@@ -8,7 +8,7 @@ async function FetchNewCar (coche, token) {
             'Access-Control-Allow-Origin': "*"
         }
       };
-    return await fetch("https://miutu-eco.herokuapp.com/create/car", options)
+    return await fetch("http://localhost:8080/create/car", options)
 }
 
 export default FetchNewCar

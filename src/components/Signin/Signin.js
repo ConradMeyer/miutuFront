@@ -10,7 +10,7 @@ function Signin(props) {
   const [pass, setPass] = useState("");
 
   const handleEmail = (event) => {
-    setEmail(event.target.value);
+    setEmail(event.target.value.toLowerCase());
   };
 
   const handlePass = (event) => {

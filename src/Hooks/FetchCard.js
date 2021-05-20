@@ -8,7 +8,7 @@ async function FetchCard(card) {
       'Access-Control-Allow-Origin': "*"
     }
   };
-  return await fetch("https://miutu-eco.herokuapp.com/create/card", options);
+  return await fetch("http://localhost:8080/create/card", options);
 }
 
 export default FetchCard;

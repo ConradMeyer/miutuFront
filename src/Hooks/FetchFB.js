@@ -7,7 +7,7 @@ async function FetchSignupFB(user) {
         'Access-Control-Allow-Origin': "*"
        },
     };
-    return await fetch("https://miutu-eco.herokuapp.com/signup/google", options);
+    return await fetch("http://localhost:8080/signup/google", options);
   }
   
   export default FetchSignupFB;

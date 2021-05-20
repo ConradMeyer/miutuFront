@@ -7,7 +7,7 @@ async function FetchLogout (token) {
             'Access-Control-Allow-Origin': "*"
         }
       };
-    return await fetch("https://miutu-eco.herokuapp.com/signout", options)
+    return await fetch("http://localhost:8080/signout", options)
 }
 
 export default FetchLogout;

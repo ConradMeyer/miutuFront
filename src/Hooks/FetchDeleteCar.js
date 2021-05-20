@@ -8,7 +8,7 @@ async function FetchDeleteCar (coche, token) {
             'Access-Control-Allow-Origin': "*"
         }
       };
-    return await fetch("https://miutu-eco.herokuapp.com/delete/car", options)
+    return await fetch("http://localhost:8080/delete/car", options)
 }
 
 export default FetchDeleteCar

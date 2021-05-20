@@ -8,7 +8,7 @@ async function FetchEditUser (user, token) {
             'Access-Control-Allow-Origin': "*"
         }
       };
-    return await fetch("https://miutu-eco.herokuapp.com/edit/user", options)
+    return await fetch("http://localhost:8080/edit/user", options)
 }
 
 export default FetchEditUser;

@@ -7,7 +7,7 @@ async function FetchUser (token) {
             'Access-Control-Allow-Origin': "*"
         }
       };
-    return await fetch("https://miutu-eco.herokuapp.com/usuario/get", options)
+    return await fetch("http://localhost:8080/usuario/get", options)
 }
 
 export default FetchUser;

@@ -15,6 +15,7 @@ div.todo-tusrecargas h1 {
 }
 h3.sin-recargas {
   text-align: center;
+  margin: 20px auto;
 }
 div.todo-tusrecargas img:hover {
   cursor: pointer;
